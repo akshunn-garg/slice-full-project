@@ -21,9 +21,13 @@ From the parent project folder, run `powershell -ExecutionPolicy Bypass -File .\
 
 Alternatively, run `.\codex_attempt\.venv\Scripts\python.exe -B codex_attempt\app.py --port 5001`. Install the app dependencies when setting up a fresh environment with `.\codex_attempt\.venv\Scripts\python.exe -m pip install -r codex_attempt\requirements-app.txt`.
 
-Upload a raw `.eml` file to see the frozen model's risk score, BAS/DMS/LOS scores, combined link score, STS risk and trust, authentication evidence, extracted hyperlinks, feature values and processing time. Scores are risk indicators, not verified phishing probabilities. Missing authentication is labelled unknown; the unchanged STS rule still assigns risk to missing evidence. Emails without supported HTML HTTP(S) hyperlinks receive no phishing verdict. The app makes no link visits or live infrastructure requests and does not retain uploads. Existing false-positive limitations still apply; this interface does not retrain or improve the model.
+Upload a raw `.eml` file to see the risk score, BAS/DMS/LOS scores, combined link score, STS risk and trust, authentication evidence, extracted hyperlinks, feature values and processing time. Scores are risk indicators, not verified phishing probabilities. Missing authentication is labelled unknown; the unchanged STS rule still assigns risk to missing evidence. Uploaded authentication headers are read, not cryptographically verified.
 
-App integration checks: `.\codex_attempt\.venv\Scripts\python.exe -B -m unittest discover -s codex_attempt -p test_app.py -v`.
+Emails with supported HTML HTTP(S) hyperlinks use the unchanged frozen combined model and threshold. Emails without supported HTML hyperlinks now receive an **STS-only assessment**, using `predict.rule_risk` and the existing standalone threshold in `models/individual/sts_rules.json` (0.25). The link classifier does not run for these emails. This added app policy has not been evaluated on an independent linkless-email dataset; the published combined-model metrics do not describe it. `in_scope` and `link_model_in_scope` still identify the original link model's scope; `assessment_mode` identifies the decision path used by the app.
+
+The app is offline by default. Enable **Add optional live RCS assessment** to run a separate worker that uses the original RCS extractor and `phish_dataset_v2/models/final3/slice_rcs_model.joblib`. This legacy model is outside the codex_attempt leakage audit and evaluation. It follows current redirects and queries current RDAP/IP metadata, displays its own score and threshold, and **never changes the combined or STS-only verdict**. RCS is inapplicable without supported HTML links. Scans are limited to five HTML links, five redirects per request, thirty requests, and a 45-second worker timeout. Only public HTTP(S) endpoints on ports 80/443 are allowed; DNS-pinned transport validates every redirect. Unsubscribe/sign-out targets are blocked. Failed or incomplete measurements produce a partial/unavailable result without a model score. The legacy abuse-intelligence feature remains a placeholder. Raw emails are not retained by either path.
+
+Existing false-positive limitations remain. No model was retrained or threshold retuned for these app changes. App and mocked live-network integration checks: `.\codex_attempt\.venv\Scripts\python.exe -B -m unittest discover -s codex_attempt -p 'test_*.py' -v`.
 
 ## Evaluation protocol
 
@@ -56,7 +60,7 @@ Static code lists are frozen at the present version, not reconstructed historica
 
 The final combined output is a risk score. Platt calibration covers the link score before adding STS; the resulting final score must not be presented as a verified deployment probability. Precision depends strongly on phishing prevalence, so the metrics also include hypothetical 1% and 0.1% prevalence projections. Those projections assume recall and FPR transfer.
 
-Emails without extracted links are outside scope. `predict.py` marks `in_scope=false` for these inputs. PASS/flag outcomes are advisory and do not modify any mailbox.
+Emails without extracted links are outside the frozen combined model's evaluation scope. `predict.py` marks `in_scope=false` for these inputs. The app adds a separately labelled STS-only fallback, whose linkless-email performance has not been established. PASS/flag outcomes are advisory and do not modify any mailbox.
 
 Latency includes no live network requests. Warm single-email time is different from batched amortized time; cached model reload time is not cold process startup. These measurements are machine-specific.
 
