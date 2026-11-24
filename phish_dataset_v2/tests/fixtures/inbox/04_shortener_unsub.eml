@@ -1,0 +1,33 @@
+Return-Path: <bounce@mailer.example.net>
+Received: from out1.mailer.example.net (out1.mailer.example.net [203.0.113.21])
+	by mx.recipient.example with ESMTPS id P2; Tue, 06 Oct 2026 10:00:02 +0000
+Received: from app.mailer.example.net (10.1.2.3)
+	by out1.mailer.example.net with ESMTP; Tue, 06 Oct 2026 10:00:01 +0000
+Authentication-Results: mx.recipient.example;
+	spf=pass smtp.mailfrom=bounce@mailer.example.net;
+	dkim=pass header.d=example.com header.s=k2;
+	dmarc=pass header.from=example.com
+DKIM-Signature: v=1; a=rsa-sha256; d=example.com; s=k2; h=from; bh=x; b=y
+From: "Example Shop" <deals@example.com>
+Reply-To: help@support.example.net
+To: test.recipient@recipient.example
+Subject: Weekend deals for Test Recipient
+Date: Tue, 06 Oct 2026 10:00:00 +0000
+Message-ID: <fixture-0004@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="zz"
+
+--zz
+Content-Type: text/plain; charset="utf-8"
+
+Deals inside.
+--zz
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<a href="https://bit.ly/3exAmpl">Shop now</a>
+<a href="https://track.example.com/c?u=test.recipient@recipient.example&amp;redirect=https%3A%2F%2Fexample.com%2Fsale">View deals</a>
+<a href="https://www.example.com/account/orders">Your orders</a>
+<p>Don't want these? <a href="https://mailer.example.net/ss/x/9a8b7c">click here</a></p>
+</body></html>
+--zz--

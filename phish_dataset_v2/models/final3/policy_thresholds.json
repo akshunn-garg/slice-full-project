@@ -1,0 +1,5 @@
+{
+ "warn": 0.6768179201506037,
+ "block": 0.9458614828445395,
+ "source": "validation split of slice_dataset_v4 (warn: <=1% legit flagged, block: <=0.1%)"
+}

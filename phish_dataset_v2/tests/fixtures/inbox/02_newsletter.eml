@@ -1,0 +1,20 @@
+Return-Path: <bounces@mail.example.com>
+Received: from out.mail.example.com (out.mail.example.com [198.51.100.5])
+	by mx.recipient.example with ESMTPS id 9Q; Wed, 20 Mar 2024 10:00:02 +0000
+Received: from app01.internal.example.com (app01.internal.example.com [198.51.100.6])
+	by out.mail.example.com with ESMTP; Wed, 20 Mar 2024 10:00:01 +0000
+Authentication-Results: mx.recipient.example;
+	spf=pass smtp.mailfrom=bounces@mail.example.com;
+	dkim=pass header.d=example.com header.s=k1;
+	dmarc=pass (p=REJECT) header.from=example.com
+From: Example Team <news@example.com>
+To: someone@recipient.example
+Subject: Your March summary
+Date: Wed, 20 Mar 2024 10:00:00 +0000
+Message-ID: <fixture-0002@example.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body><p>Hello, here is your summary.</p>
+<p><a href="https://www.example.com/account/summary?month=2024-03">View account</a></p>
+<p><a href="https://example.com/unsubscribe">Unsubscribe</a></p></body></html>

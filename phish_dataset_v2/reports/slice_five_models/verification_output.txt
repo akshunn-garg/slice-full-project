@@ -1,0 +1,8 @@
+STS: PASS  (SLiCE-STS-LightGBM v1.0.0, 10 features, sampling=none, threshold=0.0497, mean score legit=0.018 phish=1.000)
+BAS: PASS  (SLiCE-BAS-LightGBM v1.0.0, 6 features, sampling=undersample, threshold=0.8532, mean score legit=0.113 phish=0.928)
+DMS: PASS  (SLiCE-DMS-LightGBM v1.0.0, 7 features, sampling=oversample, threshold=0.5555, mean score legit=0.416 phish=0.615)
+LOS: PASS  (SLiCE-LOS-LightGBM v1.0.0, 10 features, sampling=undersample, threshold=0.8362, mean score legit=0.140 phish=0.901)
+RCS: PASS  (SLiCE-RCS-LightGBM v1.0.0, 9 features, sampling=undersample, threshold=0.8943, mean score legit=0.255 phish=0.767)
+
+predict_all_scores -> (200, 10), columns ['STS_prob', 'STS_flag', 'BAS_prob', 'BAS_flag', 'DMS_prob', 'DMS_flag', 'LOS_prob', 'LOS_flag', 'RCS_prob', 'RCS_flag']
+ALL CHECKS PASSED

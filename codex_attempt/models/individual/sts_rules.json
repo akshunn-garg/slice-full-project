@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "spf": 1.0,
+    "dkim": 1.0,
+    "dmarc": 1.5,
+    "reply_to_mismatch": 1.0,
+    "return_path_mismatch": 0.5,
+    "sender_domain_entropy": 0.5,
+    "unusual_received_chain": 0.5
+  },
+  "threshold": 0.25,
+  "implementation": "predict.rule_risk",
+  "source_bundle_sha256": "38b4851313df6e31b7edbb443c8ef30128b66af2d11e918230057b67f813b491",
+  "note": "Fixed rule score, not a trained ML model; domain age is excluded."
+}

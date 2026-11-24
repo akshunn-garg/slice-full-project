@@ -1,0 +1,44 @@
+[
+  {
+    "model": "BAS",
+    "n": 170,
+    "false_positives": 0,
+    "fpr": 0.0,
+    "threshold": 0.9305907663843425
+  },
+  {
+    "model": "DMS",
+    "n": 170,
+    "false_positives": 0,
+    "fpr": 0.0,
+    "threshold": 0.9943580606393981
+  },
+  {
+    "model": "LOS",
+    "n": 170,
+    "false_positives": 0,
+    "fpr": 0.0,
+    "threshold": 0.9732702661279131
+  },
+  {
+    "model": "STS",
+    "n": 170,
+    "false_positives": 170,
+    "fpr": 1.0,
+    "threshold": 0.25
+  },
+  {
+    "model": "LINK",
+    "n": 170,
+    "false_positives": 89,
+    "fpr": 0.5235294117647059,
+    "threshold": 0.5668145289949489
+  },
+  {
+    "model": "FINAL",
+    "n": 170,
+    "false_positives": 125,
+    "fpr": 0.7352941176470589,
+    "threshold": 0.21545986361983946
+  }
+]

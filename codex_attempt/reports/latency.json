@@ -1,0 +1,29 @@
+{
+  "single_email_warm_model": {
+    "n": 100,
+    "median_ms": 122.07959999796003,
+    "p95_ms": 143.82956508779898
+  },
+  "batch_amortized_per_email": {
+    "n": 5,
+    "median_ms": 0.11768584326426657,
+    "p95_ms": 0.1603628729459087
+  },
+  "offline_feature_extraction": {
+    "n": 50,
+    "median_ms": 178.9505499182269,
+    "p95_ms": 293.5313399066217
+  },
+  "raw_email_to_verdict_warm": {
+    "n": 50,
+    "median_ms": 308.967350050807,
+    "p95_ms": 444.0181600162759
+  },
+  "reload_ms_os_cache_warm": 106.2683998607099,
+  "parity_max_error": 0.0,
+  "threads": 4,
+  "machine": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "timing_notes": "Raw bytes read before timer; features include normalization, parsing and temporary-file I/O; no network, no lookup cache. Warm repeated measurements on this machine, not service SLA."
+}

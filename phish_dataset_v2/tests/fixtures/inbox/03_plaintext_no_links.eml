@@ -1,0 +1,16 @@
+Return-Path: <alice@example.org>
+Received: from mx.example.org (mx.example.org [198.51.100.9])
+	by mx.recipient.example with ESMTPS id P1; Mon, 05 Oct 2026 08:00:01 +0000
+Authentication-Results: mx.recipient.example;
+	spf=pass smtp.mailfrom=alice@example.org;
+	dkim=none;
+	dmarc=none header.from=example.org
+From: Alice Example <alice@example.org>
+To: Test Recipient <test.recipient@recipient.example>
+Subject: Lunch on Friday?
+Date: Mon, 05 Oct 2026 08:00:00 +0000
+Message-ID: <fixture-0003@example.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hi, are we still on for lunch on Friday? Call me at +1 555 0199.

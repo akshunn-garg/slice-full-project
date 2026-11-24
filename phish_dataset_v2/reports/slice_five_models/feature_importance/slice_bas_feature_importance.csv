@@ -1,0 +1,7 @@
+rank,feature,gain,split,mean_abs_shap_val,train_missing_rate,constant_in_train,gain_share
+1,BAS__from_domain_equals_dkim_domain,20640.78975414255,138,2.891004160078993,0.0,False,0.6248877910023343
+2,BAS__sender_name_equals_claimed_brand,5605.7690853420645,148,1.3307242048597658,0.0,False,0.1697113677496541
+3,BAS__claimed_or_authenticated_brand_equals_final_redirect,5203.41231878633,1934,0.6807854163990259,0.0,False,0.15753025287746786
+4,BAS__authenticated_domain_equals_destination,996.9728936564643,828,0.09903195608536754,0.0,False,0.03018276900384393
+5,BAS__claimed_brand_equals_destination,444.4351012132829,239,0.1321288486757857,0.0,False,0.013455011748536859
+6,BAS__claimed_brand_equals_anchor,139.81468893174315,149,0.0202409426274559,0.0,False,0.004232807618163006

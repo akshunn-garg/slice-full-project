@@ -1,0 +1,4 @@
+VAL false-alarm target,B2 test FPR %,SLiCE test FPR %,B2 test recall %,SLiCE test recall %,B2 Nazario recall %,SLiCE Nazario recall %
+0.5%,0.42,0.84,96.97,92.84,94.22,83.93
+1.0%,1.96,1.26,98.48,95.32,96.79,88.82
+2.0%,7.69,2.24,99.04,97.25,98.71,93.57

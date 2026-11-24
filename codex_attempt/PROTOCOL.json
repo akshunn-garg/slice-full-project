@@ -1,0 +1,20 @@
+{
+  "seed": 20261115,
+  "input": "existing v4 cohort plus the three existing training additions; all features re-extracted offline from raw normalized mail",
+  "chronology": "main-cohort time quantiles 55/70/80/85%; extras restricted to <= original train cutoff; all group components retained only in their latest partition",
+  "groups": "transitive closure of sender/link-organization template, normalized body fingerprint, Message-ID, and SHA256; conflicting exact duplicates excluded",
+  "base_selection": "nested grouped 3-fold OOF on TRAIN; RF, LightGBM, logistic regression fixed candidates; no tuning on test",
+  "link_selection": "fixed LightGBM and logistic candidates, selected on TUNE only using TRAIN nested-OOF base scores",
+  "calibration": "class-balanced Platt on CALIBRATION only; final fixed STS weight 3",
+  "threshold": "max recall subject to empirical FPR <=1% on THRESHOLD only",
+  "evaluation": "TEST is evaluated once after model and threshold are saved; 95% cluster-bootstrap intervals",
+  "excluded": "all RCS, all INFRA, redirect results, DKIM-derived link features, sender age; no label/provenance feature inputs",
+  "limitations": [
+    "Historical cohort already used during earlier project development; this is a protocol-validation rerun, not a pristine external holdout.",
+    "Source-label confounding remains: one main legitimate mailbox and one main phishing honeypot.",
+    "Existing cohort eligibility was influenced by earlier live-processing success and feed screening; offline re-extraction cannot undo that selection.",
+    "Static shortener/brand lists are frozen current code, not historically versioned threat intelligence.",
+    "Content fingerprinting and template grouping reduce repetition but do not prove every near-duplicate or semantic campaign has been found.",
+    "Authentication verdicts are trusted receiver-provided arrival headers; arbitrary uploaded header authenticity is not verified."
+  ]
+}

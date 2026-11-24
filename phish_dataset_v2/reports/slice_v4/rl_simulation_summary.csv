@@ -1,0 +1,13 @@
+scenario,policy,second_half_false_alarm_rate,second_half_missed_phishing_rate,all_reward,final_sts_weight
+observed,fixed (link + 3*STS),0.0364,0.0289,2625.0,3.0
+observed,"RL, Thompson sampling",0.0615,0.0182,2620.2,3.267
+observed,"RL, greedy (no exploration)",0.0573,0.0165,2623.0,3.267
+legit_auth_fail,fixed (link + 3*STS),0.0439,0.0289,2599.0,3.0
+legit_auth_fail,"RL, Thompson sampling",0.0699,0.0193,2589.8,2.1768
+legit_auth_fail,"RL, greedy (no exploration)",0.0702,0.0204,2584.2,2.1768
+compromised_senders,fixed (link + 3*STS),0.0364,0.0298,2621.4,3.0
+compromised_senders,"RL, Thompson sampling",0.0624,0.0179,2619.8,2.9798
+compromised_senders,"RL, greedy (no exploration)",0.0573,0.0165,2623.0,2.9798
+both,fixed (link + 3*STS),0.0439,0.0298,2595.4,3.0
+both,"RL, Thompson sampling",0.0702,0.0193,2589.4,1.9056
+both,"RL, greedy (no exploration)",0.0702,0.0204,2583.8,1.9056

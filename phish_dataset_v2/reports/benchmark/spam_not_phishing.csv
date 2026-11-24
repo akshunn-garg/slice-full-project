@@ -1,0 +1,3 @@
+model,spam emails (with links),called phishing %,blocked %,warned %,passed %
+SLiCE final3,91,1.1,0.0,1.1,98.9
+B2 all-features flat,91,2.2,,,97.8

@@ -1,0 +1,35 @@
+Return-Path: <bounce-7731@example.com>
+Received: from mail.example.com (mail.example.com [198.51.100.23])
+	by mx.recipient.example (Postfix) with ESMTPS id 4Xyz
+	for <jane.doe@recipient.example>; Tue, 12 Mar 2024 09:14:02 +0000 (UTC)
+Received: from relay2.example.com (relay2.example.com [198.51.100.40])
+	by mail.example.com with ESMTP id abc123; Tue, 12 Mar 2024 09:14:00 +0000
+Authentication-Results: mx.recipient.example;
+	spf=softfail smtp.mailfrom=bounce-7731@example.com;
+	dkim=pass (2048-bit key) header.d=example.com header.s=s1 header.b=AbCdEf12;
+	dmarc=fail (p=NONE) header.from=example.org
+DKIM-Signature: v=1; a=rsa-sha256; d=example.com; s=s1; h=from:subject; bh=xx; b=yy
+From: "PayPal Service" <service@example.org>
+Reply-To: <support-desk@example.net>
+To: Jane Doe <jane.doe@recipient.example>
+Subject: Your PayPal account has been limited
+Date: Tue, 12 Mar 2024 09:13:55 +0000
+Message-ID: <fixture-0001@example.org>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset="utf-8"
+
+Dear Jane Doe, account no. 1234-5678-9012.
+
+--b1
+Content-Type: text/html; charset="utf-8"
+
+<html><body><p>Dear Jane Doe,</p>
+<p><a href="https://paypal.com.account-verify.example.net/signin?session=9f8e7d&amp;redirect=https%3A%2F%2Fexample.com%2Fcollect">https://www.paypal.com/signin</a></p>
+<p><a href="http://192.0.2.10:8080/verify">Verify your account</a></p>
+<p><a href="https://www.paypal.com/us/smarthelp/home">PayPal Service</a></p>
+</body></html>
+
+--b1--

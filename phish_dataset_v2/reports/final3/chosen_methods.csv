@@ -1,0 +1,7 @@
+model,algorithm,config,cv_pr_auc,val_pr_auc,threshold
+BAS,random_forest,"{""min_samples_leaf"": 20, ""n_estimators"": 400}",0.7911866646485215,0.7864365296229869,0.8400784770678822
+DMS,random_forest,"{""min_samples_leaf"": 20, ""n_estimators"": 400}",0.8483516876631925,0.8306241171692373,0.8577926165057648
+LOS,random_forest,"{""min_samples_leaf"": 5, ""n_estimators"": 400}",0.8964652533179496,0.9528221211269039,0.9371918539743338
+RCS,lightgbm,"{""num_leaves"": 15, ""learning_rate"": 0.05, ""n_estimators"": 300, ""min_child_samples"": 20}",0.9187291451933501,0.9414622143893351,0.9607409214028682
+LINK MODEL,lightgbm,"{""num_leaves"": 63, ""learning_rate"": 0.05, ""n_estimators"": 300, ""min_child_samples"": 10, ""colsample_bytree"": 0.8}",,0.9979340894516467,0.8404428366585928
+STS (rule),fixed rules,"{""spf"": 1.0, ""dkim"": 1.0, ""dmarc"": 1.5, ""reply_to_mismatch"": 1.0, ""return_path_mismatch"": 0.5, ""sender_domain_age"": 1.0, ""sender_domain_entropy"": 0.5, ""unusual_received_chain"": 0.5}",,,0.22855

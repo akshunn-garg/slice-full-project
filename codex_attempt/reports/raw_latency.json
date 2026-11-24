@@ -1,0 +1,44 @@
+{
+  "raw_input_count": 50,
+  "original_raw_feature_extraction": {
+    "n": 50,
+    "median_ms": 126.23050005640835,
+    "p95_ms": 263.84657504968334,
+    "min_ms": 27.966100024059415,
+    "max_ms": 303.5806000698358
+  },
+  "original_raw_model_inference": {
+    "n": 50,
+    "median_ms": 79.69405001495034,
+    "p95_ms": 114.53077500918879,
+    "min_ms": 53.29459998756647,
+    "max_ms": 141.4647998753935
+  },
+  "original_raw_read_to_verdict": {
+    "n": 50,
+    "median_ms": 269.20459989923984,
+    "p95_ms": 413.58293485827744,
+    "min_ms": 127.14349990710616,
+    "max_ms": 451.37789985165
+  },
+  "raw_file_read": {
+    "n": 50,
+    "median_ms": 37.68170007970184,
+    "p95_ms": 63.775534951128066,
+    "min_ms": 14.645699877291918,
+    "max_ms": 66.46449980325997
+  },
+  "fresh_process_read_to_verdict": {
+    "n": 3,
+    "median_ms": 7807.887699920684,
+    "p95_ms": 8797.680159891024,
+    "min_ms": 7233.933700015768,
+    "max_ms": 8907.657099887729
+  },
+  "normalized_vs_original_max_score_difference": 0.0,
+  "normalized_vs_original_differing_features": {},
+  "network_attempts": 0,
+  "logical_cpus": 16,
+  "threads_during_warm_benchmark": 4,
+  "notes": "Original inbox/phishing-pot .eml inputs, not pre-normalized copies; warm measurements include disk read, header normalization, static feature extraction and inference. Fresh-process measurements include interpreter startup/imports and model loading, with OS file cache warm; n=3."
+}

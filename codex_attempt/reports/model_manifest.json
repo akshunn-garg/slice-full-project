@@ -1,0 +1,61 @@
+{
+  "features": {
+    "BAS": [
+      "BAS__sender_name_equals_claimed_brand",
+      "BAS__claimed_brand_equals_anchor",
+      "BAS__claimed_brand_equals_destination"
+    ],
+    "DMS": [
+      "DMS__visible_url_equals_actual_target",
+      "DMS__anchor_equals_destination",
+      "DMS__button_purpose_equals_destination",
+      "DMS__brand_in_subdomain_but_not_registered",
+      "DMS__url_is_known_shortener"
+    ],
+    "LOS": [
+      "LOS__url_length_label",
+      "LOS__string_entropy",
+      "LOS__encoded_characters",
+      "LOS__ip_address",
+      "LOS__punycode",
+      "LOS__subdomain_count",
+      "LOS__nonstandard_port",
+      "LOS__redirect_like_parameters",
+      "LOS__known_shortener",
+      "LOS__misleading_brand_token"
+    ]
+  },
+  "extra_columns": [
+    "SRC__hostname_length_avg",
+    "SRC__hostname_length_max",
+    "SRC__path_length_avg",
+    "SRC__path_length_max",
+    "SRC__dot_count_avg",
+    "SRC__dot_count_max",
+    "SRC__hyphen_count_avg",
+    "SRC__hyphen_count_max",
+    "SRC__slash_count_avg",
+    "SRC__slash_count_max",
+    "SRC__query_parameter_count_avg",
+    "SRC__query_parameter_count_max",
+    "SRC__digit_count_avg",
+    "SRC__digit_count_max",
+    "SRC__repeated_brand_terms_avg",
+    "SRC__repeated_brand_terms_max",
+    "SRC__at_symbol_any",
+    "SRC__suspicious_tld_any"
+  ],
+  "threshold": 0.21545986361983946,
+  "link_algorithm": "LGBMClassifier",
+  "model_sha256": "38b4851313df6e31b7edbb443c8ef30128b66af2d11e918230057b67f813b491",
+  "sts_weights": {
+    "spf": 1.0,
+    "dkim": 1.0,
+    "dmarc": 1.5,
+    "reply_to_mismatch": 1.0,
+    "return_path_mismatch": 0.5,
+    "sender_domain_entropy": 0.5,
+    "unusual_received_chain": 0.5
+  },
+  "sts_combination_weight": 3
+}

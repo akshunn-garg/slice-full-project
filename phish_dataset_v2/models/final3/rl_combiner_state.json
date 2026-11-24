@@ -1,0 +1,22 @@
+{
+ "mean": [
+  0.0,
+  1.0,
+  3.0
+ ],
+ "precision": [
+  2.0,
+  20.0,
+  5.0
+ ],
+ "w_max": 4.0,
+ "cost_missed_phishing": 5.0,
+ "cost_false_alarm": 1.0,
+ "reward_correct": 1.0,
+ "batch_size": 50,
+ "explore": true,
+ "seed": 42,
+ "n_feedback": 0,
+ "history": [],
+ "_buffer": []
+}

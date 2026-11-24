@@ -1,0 +1,5 @@
+legit test scenario,B2 all-features: legit flagged %,SLiCE final: legit flagged %
+as observed,1.96,1.26
+forwarded (SPF fails),13.99,1.54
+"mailing list (SPF/DKIM/DMARC fail, list signs)",100.0,1.96
+"small sender, no authentication",100.0,1.82

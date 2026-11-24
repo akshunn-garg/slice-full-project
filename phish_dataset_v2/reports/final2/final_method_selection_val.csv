@@ -1,0 +1,13 @@
+algorithm,config,val_pr_auc,val_log_loss
+lightgbm,"{""num_leaves"": 15, ""learning_rate"": 0.05, ""n_estimators"": 300, ""min_child_samples"": 20}",0.9932308826848187,0.08400854774319934
+lightgbm,"{""num_leaves"": 31, ""learning_rate"": 0.05, ""n_estimators"": 300, ""min_child_samples"": 20}",0.9949808590681466,0.0851765448911852
+lightgbm,"{""num_leaves"": 7, ""learning_rate"": 0.1, ""n_estimators"": 200, ""min_child_samples"": 50}",0.9946021202427066,0.07639387936844881
+lightgbm,"{""num_leaves"": 31, ""learning_rate"": 0.02, ""n_estimators"": 600, ""min_child_samples"": 50, ""reg_lambda"": 5.0}",0.9956851183564912,0.07725758480144419
+lightgbm,"{""num_leaves"": 63, ""learning_rate"": 0.05, ""n_estimators"": 300, ""min_child_samples"": 10, ""colsample_bytree"": 0.8}",0.9962978264006878,0.07685628200152159
+hist_gradient_boosting,"{""learning_rate"": 0.05, ""max_leaf_nodes"": 15, ""max_iter"": 300, ""l2_regularization"": 0.0}",0.9957956768106023,0.06993187557137907
+hist_gradient_boosting,"{""learning_rate"": 0.1, ""max_leaf_nodes"": 31, ""max_iter"": 200, ""l2_regularization"": 1.0}",0.9976430406681946,0.062403016228700973
+hist_gradient_boosting,"{""learning_rate"": 0.05, ""max_leaf_nodes"": 7, ""max_iter"": 400, ""l2_regularization"": 5.0}",0.9961614701655418,0.07760441029543629
+logistic_regression,"{""C"": 0.01}",0.9950108499070428,0.11622872519075644
+logistic_regression,"{""C"": 0.1}",0.9946074150613844,0.10506839824251435
+logistic_regression,"{""C"": 1.0}",0.9946854601064572,0.10191047795267588
+logistic_regression,"{""C"": 10.0}",0.9947436180780698,0.10098158038697258

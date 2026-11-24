@@ -1,0 +1,3 @@
+model,test_n,test_accuracy,test_precision,test_recall,test_fpr,test_roc_auc,nazario_recall,llm_seconds_per_email_median,unparsed_answers
+LLM qwen2.5:7b,60,0.9666666666666667,1.0,0.9333333333333333,0.0,0.9972222222222222,0.775,53.49710775000858,5
+SLiCE final3,60,1.0,1.0,1.0,0.0,1.0,0.875,,0

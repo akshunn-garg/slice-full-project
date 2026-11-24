@@ -1,0 +1,30 @@
+{
+  "vendor\\build_v4\\normalize.py": {
+    "sha256": "a348e9de5fa5f6a2683289b7bf0a83be410260edb0b590b58ee3452d081aba30",
+    "matches_original": true
+  },
+  "vendor\\feature_modules\\bas_features.py": {
+    "sha256": "fe6c0437d2d126a567c9df6dc3d593112cb3717c0ea62a817a7fb623c8d6a0ea",
+    "matches_original": true
+  },
+  "vendor\\feature_modules\\dms_features.py": {
+    "sha256": "a2c79ab5d00f6a234031c24b2ffc6b6d2467a07f3551cd81996e6f46e3760a44",
+    "matches_original": true
+  },
+  "vendor\\feature_modules\\los_features.py": {
+    "sha256": "3c084bd804e2bbc5dec3fc0c3ccdf20e53ed55ef9f785cce6996803467361e24",
+    "matches_original": true
+  },
+  "vendor\\feature_modules\\source_link_infra_features.py": {
+    "sha256": "b1b7e8d436d04644f0d10a1cbd56be97631539e20b5d1ff8e5fda96623122675",
+    "matches_original": true
+  },
+  "vendor\\feature_modules\\sts_features.py": {
+    "sha256": "0dfe7b9f3617158b0d6278c7abc1c8b324269dd4244715bfdd04939c096d8fd9",
+    "matches_original": true
+  },
+  "vendor\\feature_modules\\__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches_original": true
+  }
+}

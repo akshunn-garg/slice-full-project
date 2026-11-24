@@ -1,0 +1,42 @@
+{
+  "type": "new-source retrospective legitimate-only test",
+  "model_sha256": "38b4851313df6e31b7edbb443c8ef30128b66af2d11e918230057b67f813b491",
+  "threshold": 0.21545986361983946,
+  "source": "Apache SpamAssassin 20030228 easy_ham, easy_ham_2, hard_ham",
+  "label": "Publisher non-spam (ham), interpreted as non-phishing",
+  "selection": "Every email member of the three downloaded ham archives, no score-based selection",
+  "overlap": "Exclude matching normalized SHA256, Message-ID or normalized body fingerprint against all 10,622 development extraction records; deduplicate the new batch on the same keys",
+  "scope": "Only emails with links extracted by the unchanged feature pipeline; linkless coverage reported separately",
+  "limitations": [
+    "Legitimate-only data cannot estimate phishing recall, precision, ROC-AUC or overall two-class accuracy.",
+    "Historical 2002-2003 mail predates modern authentication and is not a representative current mailbox.",
+    "Publisher labels are inherited, not newly independently hand-verified.",
+    "Canonical-body exclusion can conservatively remove related messages, not just byte-identical duplicates."
+  ],
+  "archives": [
+    {
+      "name": "20030228_easy_ham.tar.bz2",
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_easy_ham.tar.bz2",
+      "bytes": 1612216,
+      "sha256": "2b7b65904bcfcc31d2b5f51946f2d261370b257402cbbd62930b46ab83367438",
+      "label": 0,
+      "label_meaning": "Publisher-labelled non-spam / ham"
+    },
+    {
+      "name": "20030228_easy_ham_2.tar.bz2",
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_easy_ham_2.tar.bz2",
+      "bytes": 1077892,
+      "sha256": "b4bd3dc5ae5b40f38e99a0e41ad7d16b428b56e818e3a6ffa07330d62004dd38",
+      "label": 0,
+      "label_meaning": "Publisher-labelled non-spam / ham"
+    },
+    {
+      "name": "20030228_hard_ham.tar.bz2",
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_hard_ham.tar.bz2",
+      "bytes": 1029898,
+      "sha256": "ce2ce67880643dbde65ea7f85bffbfe4417349c4bd80b6b0de56262ae6b0a9c9",
+      "label": 0,
+      "label_meaning": "Publisher-labelled non-spam / ham"
+    }
+  ]
+}

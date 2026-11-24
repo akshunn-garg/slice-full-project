@@ -1,0 +1,61 @@
+{
+  "test": {
+    "n": 1441,
+    "accuracy": 0.8952116585704372,
+    "precision": 0.9089615931721194,
+    "recall": 0.8801652892561983,
+    "f1": 0.894331700489853,
+    "fpr": 0.08951048951048951,
+    "specificity": 0.9104895104895104,
+    "roc_auc": 0.9532566606946773,
+    "pr_auc": 0.9369758802142705,
+    "log_loss": 0.3257052660947746,
+    "tn": 651,
+    "fp": 64,
+    "fn": 87,
+    "tp": 639,
+    "threshold": 0.21545986361983946
+  },
+  "cluster_bootstrap_95pct": {
+    "accuracy": [
+      0.8597639836494245,
+      0.9253332220776654
+    ],
+    "precision": [
+      0.8401401971503565,
+      0.9585652107092473
+    ],
+    "recall": [
+      0.8484641335227273,
+      0.9106907212151216
+    ],
+    "f1": [
+      0.8555910865400936,
+      0.9247247143609116
+    ],
+    "fpr": [
+      0.04140882472240531,
+      0.15673963365058108
+    ],
+    "roc_auc": [
+      0.9176973556624456,
+      0.9780165263943087
+    ],
+    "pr_auc": [
+      0.8664720933211377,
+      0.9810881496744024
+    ]
+  },
+  "test_groups": 610,
+  "bootstrap_replicates": 1000,
+  "limitations": [
+    "Historical cohort already used during earlier project development; this is a protocol-validation rerun, not a pristine external holdout.",
+    "Source-label confounding remains: one main legitimate mailbox and one main phishing honeypot.",
+    "Existing cohort eligibility was influenced by earlier live-processing success and feed screening; offline re-extraction cannot undo that selection.",
+    "Static shortener/brand lists are frozen current code, not historically versioned threat intelligence.",
+    "Content fingerprinting and template grouping reduce repetition but do not prove every near-duplicate or semantic campaign has been found.",
+    "Authentication verdicts are trusted receiver-provided arrival headers; arbitrary uploaded header authenticity is not verified."
+  ],
+  "precision_if_prevalence_0.01": 0.09035024178233717,
+  "precision_if_prevalence_0.001": 0.009747000394948878
+}

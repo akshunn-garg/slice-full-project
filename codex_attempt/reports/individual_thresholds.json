@@ -1,0 +1,13 @@
+{
+  "thresholds": {
+    "BAS": 0.9305907663843425,
+    "DMS": 0.9943580606393981,
+    "LOS": 0.9732702661279131,
+    "STS": 0.25,
+    "LINK": 0.5668145289949489
+  },
+  "negative_count": 55,
+  "positive_count": 156,
+  "selection_partition": "threshold",
+  "source_bundle_sha256": "38b4851313df6e31b7edbb443c8ef30128b66af2d11e918230057b67f813b491"
+}

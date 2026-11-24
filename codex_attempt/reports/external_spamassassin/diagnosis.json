@@ -1,0 +1,474 @@
+{
+  "auth": {
+    "train_legit": {
+      "n": 1020,
+      "STS_meta__spf_result": {
+        "pass": 1013,
+        "none": 4,
+        "softfail": 3
+      },
+      "STS_meta__dkim_result": {
+        "pass": 1015,
+        "none": 3,
+        "temperror": 1,
+        "permerror": 1
+      },
+      "STS_meta__dmarc_result": {
+        "pass": 855,
+        "none": 159,
+        "fail": 6
+      },
+      "sts_risk_quantiles": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.08333333333333333,
+        "0.75": 0.125,
+        "1": 0.6833333333333332
+      }
+    },
+    "threshold_legit": {
+      "n": 55,
+      "STS_meta__spf_result": {
+        "pass": 55
+      },
+      "STS_meta__dkim_result": {
+        "pass": 55
+      },
+      "STS_meta__dmarc_result": {
+        "pass": 55
+      },
+      "sts_risk_quantiles": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.08333333333333333,
+        "0.75": 0.20833333333333334,
+        "1": 0.20833333333333334
+      }
+    },
+    "historical_test_legit": {
+      "n": 715,
+      "STS_meta__spf_result": {
+        "pass": 715
+      },
+      "STS_meta__dkim_result": {
+        "pass": 713,
+        "permerror": 2
+      },
+      "STS_meta__dmarc_result": {
+        "pass": 706,
+        "none": 8,
+        "fail": 1
+      },
+      "sts_risk_quantiles": {
+        "0": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.08333333333333333,
+        "0.75": 0.08333333333333333,
+        "1": 0.4166666666666667
+      }
+    },
+    "external_legit": {
+      "n": 170,
+      "STS_meta__spf_result": {
+        "none": 170
+      },
+      "STS_meta__dkim_result": {
+        "none": 170
+      },
+      "STS_meta__dmarc_result": {
+        "none": 170
+      },
+      "sts_risk_quantiles": {
+        "0": 0.30833333333333335,
+        "0.25": 0.30833333333333335,
+        "0.5": 0.30833333333333335,
+        "0.75": 0.39166666666666666,
+        "1": 0.6416666666666667
+      }
+    }
+  },
+  "score_quantiles": {
+    "threshold_legit": {
+      "BAS_score": {
+        "0": 0.07548193960154925,
+        "0.5": 0.7393840592881031,
+        "0.9": 0.7393840592881031,
+        "1": 0.9305907663843423
+      },
+      "DMS_score": {
+        "0": 0.36039859326316676,
+        "0.5": 0.7209068964492797,
+        "0.9": 0.7209068964492797,
+        "1": 0.8911971024443857
+      },
+      "LOS_score": {
+        "0": 0.14766743555741355,
+        "0.5": 0.4404775878550714,
+        "0.9": 0.8339128549111658,
+        "1": 0.9729209485351328
+      },
+      "link_score": {
+        "0": 0.0020541207172388265,
+        "0.5": 0.03813970051057344,
+        "0.9": 0.2675717688340791,
+        "1": 0.4794298084555353
+      },
+      "sts_risk": {
+        "0": 0.0,
+        "0.5": 0.08333333333333333,
+        "0.9": 0.20833333333333334,
+        "1": 0.20833333333333334
+      },
+      "final_score": {
+        "0": 0.0005893792361382934,
+        "0.5": 0.008769967977269626,
+        "0.9": 0.08157171944932379,
+        "1": 0.1704661413641359
+      }
+    },
+    "external_legit": {
+      "BAS_score": {
+        "0": 0.031386552489419614,
+        "0.5": 0.7393840592881031,
+        "0.9": 0.7393840592881031,
+        "1": 0.9030855095336048
+      },
+      "DMS_score": {
+        "0": 0.35057990702423186,
+        "0.5": 0.7209068964492797,
+        "0.9": 0.7209068964492797,
+        "1": 0.7209068964492797
+      },
+      "LOS_score": {
+        "0": 0.5444899559015205,
+        "0.5": 0.8994839777861661,
+        "0.9": 0.9256253184362003,
+        "1": 0.9298492658706171
+      },
+      "link_score": {
+        "0": 0.018037279260708472,
+        "0.5": 0.6036038357411992,
+        "0.9": 0.9391383612344504,
+        "1": 0.961128337029577
+      },
+      "sts_risk": {
+        "0": 0.30833333333333335,
+        "0.5": 0.30833333333333335,
+        "0.9": 0.47500000000000003,
+        "1": 0.6416666666666667
+      },
+      "final_score": {
+        "0": 0.013097981102947872,
+        "0.5": 0.560946397544013,
+        "0.9": 0.8967255410874437,
+        "1": 0.9329455847457723
+      }
+    }
+  },
+  "counterfactual_diagnostic_only": {
+    "note": "Forces authentication passes to isolate sensitivity; these are NOT verified labels or a deployable fix. All other fields and models unchanged.",
+    "actual_final_fp": 125,
+    "forced_auth_pass_fp": 99,
+    "all_sts_risk_zero_fp": 92
+  },
+  "raw_link_model_mean_contributions_on_external_false_positives": {
+    "SRC__at_symbol_any": 1.0553181264372438,
+    "LOS": 0.333236530477235,
+    "SRC__slash_count_avg": 0.13802884147521624,
+    "SRC__path_length_max": 0.130563879901553,
+    "SRC__digit_count_max": 0.1269466656914039,
+    "SRC__path_length_avg": 0.116959107578733,
+    "SRC__hostname_length_avg": 0.08379709116520022,
+    "SRC__digit_count_avg": 0.0696994166563408
+  },
+  "feature_shifts": [
+    {
+      "feature": "LOS__nonstandard_port",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.0,
+      "external_legit_mean": 0.004147812971342383,
+      "standardized_mean_shift": 414781.2971342383
+    },
+    {
+      "feature": "DMS__url_is_known_shortener",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.0,
+      "external_legit_mean": 0.002427123116951716,
+      "standardized_mean_shift": 242712.31169517158
+    },
+    {
+      "feature": "LOS__known_shortener",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.0,
+      "external_legit_mean": 0.002427123116951716,
+      "standardized_mean_shift": 242712.31169517158
+    },
+    {
+      "feature": "LOS__ip_address",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.0,
+      "external_legit_mean": 0.0017774382480264831,
+      "standardized_mean_shift": 177743.8248026483
+    },
+    {
+      "feature": "SRC__at_symbol_any",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 1.0,
+      "threshold_legit_mean": 0.01818181818181818,
+      "external_legit_mean": 0.5176470588235295,
+      "standardized_mean_shift": 3.7041330872980684
+    },
+    {
+      "feature": "SRC__repeated_brand_terms_max",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 2.0,
+      "threshold_legit_mean": 0.43636363636363634,
+      "external_legit_mean": 2.211764705882353,
+      "standardized_mean_shift": 2.400942080984158
+    },
+    {
+      "feature": "LOS__url_length_label",
+      "threshold_legit_median": 3.0,
+      "external_legit_median": 1.0,
+      "threshold_legit_mean": 2.750323342503254,
+      "external_legit_mean": 0.7667739674166613,
+      "standardized_mean_shift": -1.6335559176539953
+    },
+    {
+      "feature": "LOS__string_entropy",
+      "threshold_legit_median": 5.778530804457442,
+      "external_legit_median": 4.771661750928879,
+      "threshold_legit_mean": 5.408026678056712,
+      "external_legit_mean": 4.654814551496552,
+      "standardized_mean_shift": -1.163425420910545
+    },
+    {
+      "feature": "SRC__slash_count_avg",
+      "threshold_legit_median": 4.9375,
+      "external_legit_median": 1.0976190476190477,
+      "threshold_legit_mean": 3.44265543415741,
+      "external_legit_mean": 1.5343868233913802,
+      "standardized_mean_shift": -1.1069265323441213
+    },
+    {
+      "feature": "SRC__query_parameter_count_max",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 2.0,
+      "threshold_legit_mean": 0.8909090909090909,
+      "external_legit_mean": 2.3058823529411763,
+      "standardized_mean_shift": 0.9598690190053171
+    },
+    {
+      "feature": "SRC__path_length_avg",
+      "threshold_legit_median": 119.4375,
+      "external_legit_median": 8.879999999999999,
+      "threshold_legit_mean": 159.5089507640955,
+      "external_legit_mean": 12.701770560125222,
+      "standardized_mean_shift": -0.9034651357236309
+    },
+    {
+      "feature": "SRC__digit_count_avg",
+      "threshold_legit_median": 36.0,
+      "external_legit_median": 5.09709653092006,
+      "threshold_legit_mean": 53.004326550669866,
+      "external_legit_mean": 5.522613583229874,
+      "standardized_mean_shift": -0.8989278680217933
+    },
+    {
+      "feature": "SRC__path_length_max",
+      "threshold_legit_median": 123.0,
+      "external_legit_median": 25.5,
+      "threshold_legit_mean": 192.1090909090909,
+      "external_legit_mean": 31.95294117647059,
+      "standardized_mean_shift": -0.7977705328786617
+    },
+    {
+      "feature": "SRC__digit_count_max",
+      "threshold_legit_median": 46.0,
+      "external_legit_median": 11.0,
+      "threshold_legit_mean": 65.07272727272728,
+      "external_legit_mean": 14.411764705882353,
+      "standardized_mean_shift": -0.7360000660277997
+    },
+    {
+      "feature": "SRC__hostname_length_max",
+      "threshold_legit_median": 21.0,
+      "external_legit_median": 20.0,
+      "threshold_legit_mean": 19.618181818181817,
+      "external_legit_mean": 22.058823529411764,
+      "standardized_mean_shift": 0.6321321404487655
+    },
+    {
+      "feature": "SRC__slash_count_max",
+      "threshold_legit_median": 5.0,
+      "external_legit_median": 2.0,
+      "threshold_legit_mean": 3.7818181818181817,
+      "external_legit_mean": 3.1588235294117646,
+      "standardized_mean_shift": -0.37456942609797733
+    },
+    {
+      "feature": "SRC__repeated_brand_terms_avg",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.4693366708385482,
+      "threshold_legit_mean": 0.38765151515151514,
+      "external_legit_mean": 0.613871865726852,
+      "standardized_mean_shift": 0.3415137191943362
+    },
+    {
+      "feature": "DMS__anchor_equals_destination",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.04962121212121212,
+      "external_legit_mean": 0.10551921976180287,
+      "standardized_mean_shift": 0.2840840955287576
+    },
+    {
+      "feature": "BAS__claimed_brand_equals_destination",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.10227272727272728,
+      "external_legit_mean": 0.021242971946686905,
+      "standardized_mean_shift": -0.27134878003951934
+    },
+    {
+      "feature": "LOS__redirect_like_parameters",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.07272727272727272,
+      "external_legit_mean": 0.008931754519989813,
+      "standardized_mean_shift": -0.24341833859658368
+    },
+    {
+      "feature": "LOS__encoded_characters",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.08116883116883117,
+      "external_legit_mean": 0.01721984015829166,
+      "standardized_mean_shift": -0.2427970129909682
+    },
+    {
+      "feature": "DMS__brand_in_subdomain_but_not_registered",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.031818181818181815,
+      "external_legit_mean": 0.0,
+      "standardized_mean_shift": -0.19047666877921882
+    },
+    {
+      "feature": "SRC__hyphen_count_avg",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.03636363636363636,
+      "external_legit_mean": 0.006704676528630878,
+      "standardized_mean_shift": -0.1569933240362502
+    },
+    {
+      "feature": "DMS__visible_url_equals_actual_target",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.04962121212121212,
+      "external_legit_mean": 0.07965460669647773,
+      "standardized_mean_shift": 0.15263531016044732
+    },
+    {
+      "feature": "LOS__subdomain_count",
+      "threshold_legit_median": 1.0,
+      "external_legit_median": 1.0,
+      "threshold_legit_mean": 1.09112062180244,
+      "external_legit_mean": 0.9994247886275466,
+      "standardized_mean_shift": -0.14622166627118297
+    },
+    {
+      "feature": "SRC__hostname_length_avg",
+      "threshold_legit_median": 21.0,
+      "external_legit_median": 19.54016913319239,
+      "threshold_legit_mean": 19.17072609208973,
+      "external_legit_mean": 18.590817705888515,
+      "standardized_mean_shift": -0.13906055896964215
+    },
+    {
+      "feature": "SRC__dot_count_avg",
+      "threshold_legit_median": 2.0,
+      "external_legit_median": 2.0,
+      "threshold_legit_mean": 2.0865751672569854,
+      "external_legit_mean": 2.0029052049597875,
+      "standardized_mean_shift": -0.13508122245114654
+    },
+    {
+      "feature": "LOS__misleading_brand_token",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.038712121212121205,
+      "external_legit_mean": 0.018599933870212297,
+      "standardized_mean_shift": -0.11749753223811325
+    },
+    {
+      "feature": "DMS__button_purpose_equals_destination",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.005673963717441979,
+      "external_legit_mean": 0.0074913896459953755,
+      "standardized_mean_shift": 0.09874187966646776
+    },
+    {
+      "feature": "SRC__query_parameter_count_avg",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 1.0178571428571428,
+      "threshold_legit_mean": 0.7385684111672254,
+      "external_legit_mean": 0.8653986983769912,
+      "standardized_mean_shift": 0.09027808495568533
+    },
+    {
+      "feature": "BAS__claimed_brand_equals_anchor",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.006060606060606061,
+      "external_legit_mean": 0.0021889768817159433,
+      "standardized_mean_shift": -0.08613829221268078
+    },
+    {
+      "feature": "SRC__hyphen_count_max",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.03636363636363636,
+      "external_legit_mean": 0.047058823529411764,
+      "standardized_mean_shift": 0.05661267265223402
+    },
+    {
+      "feature": "SRC__dot_count_max",
+      "threshold_legit_median": 2.0,
+      "external_legit_median": 2.0,
+      "threshold_legit_mean": 2.1454545454545455,
+      "external_legit_mean": 2.1588235294117646,
+      "standardized_mean_shift": 0.020558044434476095
+    },
+    {
+      "feature": "BAS__sender_name_equals_claimed_brand",
+      "threshold_legit_median": 1.0,
+      "external_legit_median": 1.0,
+      "threshold_legit_mean": 0.9636363636363636,
+      "external_legit_mean": 0.9647058823529412,
+      "standardized_mean_shift": 0.005661267265223542
+    },
+    {
+      "feature": "LOS__punycode",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.0,
+      "external_legit_mean": 0.0,
+      "standardized_mean_shift": 0.0
+    },
+    {
+      "feature": "SRC__suspicious_tld_any",
+      "threshold_legit_median": 0.0,
+      "external_legit_median": 0.0,
+      "threshold_legit_mean": 0.0,
+      "external_legit_mean": 0.0,
+      "standardized_mean_shift": 0.0
+    }
+  ]
+}

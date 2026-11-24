@@ -1,0 +1,79 @@
+{
+  "test_type": "new-source retrospective legitimate-only test",
+  "source_emails": 4150,
+  "after_overlap_exclusion": 4096,
+  "exclusions": {
+    "within_batch_repeat_body_fingerprint": 54
+  },
+  "in_scope": 170,
+  "linkless_out_of_scope": 3926,
+  "in_scope_coverage": 0.04150390625,
+  "false_positives": 125,
+  "true_negatives": 45,
+  "false_positive_rate": {
+    "value": 0.7352941176470589,
+    "wilson_95pct": [
+      0.6643070612536975,
+      0.7958823581328175
+    ],
+    "denominator": 170
+  },
+  "correctly_allowed_legitimate_fraction": {
+    "value": 0.2647058823529412,
+    "wilson_95pct": [
+      0.2041176418671824,
+      0.33569293874630246
+    ],
+    "denominator": 170
+  },
+  "phishing_recall": null,
+  "phishing_precision": null,
+  "overall_two_class_accuracy": null,
+  "model_sha256": "38b4851313df6e31b7edbb443c8ef30128b66af2d11e918230057b67f813b491",
+  "threshold": 0.21545986361983946,
+  "batch_inference_ms": 184.766799909994,
+  "by_archive": {
+    "20030228_easy_ham.tar.bz2": {
+      "in_scope": 5,
+      "false_positives": 3,
+      "fpr": {
+        "value": 0.6,
+        "wilson_95pct": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "denominator": 5
+      }
+    },
+    "20030228_easy_ham_2.tar.bz2": {
+      "in_scope": 8,
+      "false_positives": 5,
+      "fpr": {
+        "value": 0.625,
+        "wilson_95pct": [
+          0.30574239460262737,
+          0.8631557141764026
+        ],
+        "denominator": 8
+      }
+    },
+    "20030228_hard_ham.tar.bz2": {
+      "in_scope": 157,
+      "false_positives": 117,
+      "fpr": {
+        "value": 0.7452229299363057,
+        "wilson_95pct": [
+          0.6717720487038245,
+          0.8069602418671004
+        ],
+        "denominator": 157
+      }
+    }
+  },
+  "limitations": [
+    "Legitimate-only data cannot estimate phishing recall, precision, ROC-AUC or overall two-class accuracy.",
+    "Historical 2002-2003 mail predates modern authentication and is not a representative current mailbox.",
+    "Publisher labels are inherited, not newly independently hand-verified.",
+    "Canonical-body exclusion can conservatively remove related messages, not just byte-identical duplicates."
+  ]
+}

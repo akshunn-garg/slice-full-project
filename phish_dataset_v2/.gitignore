@@ -1,0 +1,9 @@
+# raw emails, OAuth secrets and id maps must never be committed
+private/
+*.eml
+!tests/fixtures/**/*.eml
+credentials.json
+token.json
+id_map*.csv
+test_output/private/
+__pycache__/

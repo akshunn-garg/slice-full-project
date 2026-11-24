@@ -1,0 +1,4 @@
+set,n,block,warn,pass
+test legit,715,0.0,1.26,98.74
+test phishing,726,90.5,4.82,4.68
+Nazario phishing,778,76.99,11.83,11.18

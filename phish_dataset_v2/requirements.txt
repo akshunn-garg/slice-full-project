@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+dnspython          # required by the source-link/infrastructure module (DNS_TTL, nameserver_count)
+pandas
+openpyxl
+google-api-python-client
+google-auth-oauthlib

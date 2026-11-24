@@ -1,0 +1,4 @@
+# Preserve exact bytes: evaluation reports record hashes of frozen source files.
+* -text
+*.joblib binary
+*.docx binary

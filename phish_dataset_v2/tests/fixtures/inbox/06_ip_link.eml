@@ -1,0 +1,13 @@
+Return-Path: <notice@example.net>
+Received: from a.example.net (a.example.net [192.0.2.44])
+	by mx.recipient.example with SMTP id P3; Wed, 07 Oct 2026 11:00:02 +0000
+From: Account Team <notice@example.net>
+To: test.recipient@recipient.example
+Subject: Please review
+Date: Wed, 07 Oct 2026 11:00:00 +0000
+Message-ID: <fixture-0006@example.net>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body><a href="http://192.0.2.10:8080/login?next=/home">Sign in</a>
+<a href="https://xn--exmple-cua.example.net/verify">https://example.net/verify</a></body></html>

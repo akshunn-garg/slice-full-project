@@ -1,0 +1,9 @@
+{
+  "cross_partition_overlap_checks": 50,
+  "forbidden_features_excluded": true,
+  "label_provenance_future_columns_have_zero_inference_effect": true,
+  "network_denied_raw_email_inference": true,
+  "linkless_scope_check": true,
+  "model_reload_prediction_parity": "covered in latency benchmark",
+  "status": "PASS"
+}
